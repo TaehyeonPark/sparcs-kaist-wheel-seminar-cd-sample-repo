@@ -47,3 +47,14 @@ describe('GET /health-check', () => {
 });
 
 // TODO : test script for /assignment
+describe('GET /assignment', () => {
+  it('should return 404', () => {
+    return request(app).get('/assignment')
+      .expect(404);
+  });
+
+  it('should return "may be not found?"', () => {
+    return request(app).get('/assignment')
+      .expect('may be not found?');
+  });
+});
