@@ -35,15 +35,15 @@ describe('GET /health-check', () => {
       .expect('ok');
   });
 
-  it('should return 404 (must fail)', () => {
-    return request(app).get('/health-check')
-      .expect(404);
-  });
+  // it('should return 404 (must fail)', () => {
+  //   return request(app).get('/health-check')
+  //     .expect(404);
+  // });
 
-  it('should return "ok" (must fail)', () => {
-    return request(app).get('/health-check')
-      .expect('not ok');
-  });
+  // it('should return "ok" (must fail)', () => {
+  //   return request(app).get('/health-check')
+  //     .expect('not ok');
+  // });
 });
-//12345678
+
 // TODO : test script for /assignment
